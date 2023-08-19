@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Consent Form</title>
+    <link rel="stylesheet" type="text/css" href="./my_Style.css">
+   
+</head>
+<body>
+    <div class="container">
+        <h1>Online Consent Form</h1>
+        <p>
+           This study is part of a teaching/learning study conducted by Dr. Adetunji Adeniran at
+           University of Dundee. 
+        <br/>
+        
+          <b>Purpose:</b> </br>
+          Our goal is to provide a framework for assessment design in an era where students have access to and use ChatGPT. 
+          This objective entails assessing the effect of students' access to and use of ChatGPT on their learning opportunities 
+          and cognitive gains from assignments and formative assessments. This preliminary study will focus on formative assessments 
+          and assignments in "Introduction to Software Development with Java," a course for first-year Computer Science students.
+         </br>
+      
+        <b>Procedure:</b> </br>
+        <ul>
+          <li>
+              You will be shown  one or more list of knowledge-components (KCs) expected for student to gain or show to have 
+              gained from a formaitive assessment or assignment question.
+          </li>
+          <li>
+              You will be shown two question types that are expected to provide learning opportunities that captures the KCs defined in (1).
+          </li>
+          <li>
+            Then, you will be asked some questions regarding the two question-types regarding how well you think they can provide the student 
+            with the opportunity to learn the KCs and/or demonstate haven gained the KCs in their solution, considering their potential access to 
+            and use of ChatGPT in solving the learning task.
+          </li>
+        </ul>
+        </br>
+         <b>Participant Requirements: </b>  </br>
+          This study is limited to individuals over the age of 18 with
+           at least a degree in Computer Science and at least a rudimentary understanding of programming. 
+           Particularly computer science (programming) instructors.
+         </br>
+          <b>Risk: </b>  </br>
+          The risks and discomfort associated with participation in this study are no greater than those ordinarily 
+          encountered in daily life or during other online activities.
+         </br>
+           <b>Benefit: </b>  </br>
+          There may be no personal benefit from your participation in the study, but the knowledge received may be of value to humanity.
+         </br>
+              <b>Compensation and Cost: </b> </br>
+          There will be no personal compensation nor cost to you in for participating in this study.
+         </br>
+           <b>Compensation and Cost: </b>  </br>
+          There will be no personal compensation nor cost to you in for participating in this study.
+         </br>
+           <b>Future Use of Information and/or Bio-Specimens: </b>  </br>
+          We may use the data for our future research studies, or we may distribute the data to other researchers 
+          for their research studies. We would do this without getting additional informed consent from you 
+          (or your legally authorized representative). Sharing of data with other researchers will only be done in 
+          such a manner that you will not be identified (as we do not collect any personal data).
+         </br>
+          <b>Right to Ask Question and Contact Information: </b>  </br>
+          If you have any questions about this study, you should feel free to ask by contacting 
+           Dr. Adetunji Adeniran at aadeniran001@dundee.ac.uk.
+         </br>
+          <b>Voluntary participation: </b>  </br>
+          Your participation in this research is voluntary. You may discontinue participation at any time during the research activity. 
+          You may print a copy of this consent form for your records.
+          Please check "Yes" if all the conditions below are correct concerning your participation in this study; otherwise, please check "No":
+          <ol>
+            <li>I am age 18 or older.</li>
+            <li>I have at least a degree in computing science and a basic understanding of programing.</li>
+            <li>I have read and understand the information above.</li>
+            <li>I want to participante in this study and continue with the activity</li>
+          </ol>
+         </br>
+        </p>
+        <div class="buttons">
+            <button class="button agree" id="Yes" onclick="handleAgree()">Yes</button>
+            <button class="button disagree" onclick="handleDisagree()">No</button>
+        </div>
+    </div>
+
+  
+    <script>
+        function handleAgree() {
+            alert('Thank you for agreeing to the terms and conditions.');
+            const button = document.getElementsById('Yes');
+           
+
+            //Add addition actions here if needed
+        }
+
+        function handleDisagree() {
+            alert('You have chosen not to agree to the terms and conditions.');
+            // Add additional actions here if needed
+        }
+    </script>
+</body>
+</html>

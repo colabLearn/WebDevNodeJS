@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Consent Form</title>
+    <link rel="stylesheet" type="text/css" href="./CSS/myStyle.css">
+    <!-- <style>
+     body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            text-align: center;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .agree {
+            background-color: #4caf50;
+            color: white;
+        }
+        .disagree {
+            background-color: #f44336;
+            color: white;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .logo {
+            width: 100px;
+            height: auto;
+        }
+    </style> -->
+</head>
+<body>
+    <div class="container">
+        <h1>Online Consent Form</h1>
+        <p>
+           This study is part of a teaching/learning research study conducted by Dr. Adetunji Adenira at
+           University of Dundee. <br/>
+           <b>Purpose:</b> <br/>
+           You will be shown  one or more knowledge components in topics arount introduction to software development in Java; also, 
+           you will be shown two question types that are aimed at serving as formative assessments to make students to gain the 
+           knowledge components. Then, you will bed asked some questions regarding the two question type and how well each or/and 
+           both of the question can enlighten the students with respect to the targeted knowledge components.
+           </p>
+        <div class="buttons">
+            <button class="button agree" onclick="handleAgree()">Agree</button>
+            <button class="button disagree" onclick="handleDisagree()">Disagree</button>
+        </div>
+    </div>
+
+    <div class="footer">
+        <img src="./img/logo.png" alt="Logo" class="logo">
+    </div>
+    <script>
+        function handleAgree() {
+            alert('Thank you for agreeing to the terms and conditions.');
+            // Add additional actions here if needed
+        }
+
+        function handleDisagree() {
+            alert('You have chosen not to agree to the terms and conditions.');
+            // Add additional actions here if needed
+        }
+    </script>
+</body>
+</html>
