@@ -1,6 +1,7 @@
 
 const express = require('express')
 const app = express()
+const fortunes = require('./lib/fortune')
 
 
 const port = process.env.PORT || 3000
@@ -8,12 +9,6 @@ const port = process.env.PORT || 3000
 //Loads the handlebars module
 const handlebars = require('express-handlebars')
 
-const fortunes =[
-    "Conquer your fears or they will conquer you.",
-    "Do not fear what you don;t know.",
-    "You will have a pleasant surprise",
-    "whenever possible, keep it simple",
-]
 
 //configure Handlebars view engine
 app.set('view engine', 'handlebars')
@@ -42,7 +37,7 @@ app.get('/about', (req, res) => {
     fortunes[Math.floor(Math.random()*fortunes.length)]
     res.render('about', {
         layout: 'meadowlark',
-        fortunes: randomFortune
+        fortunes: fortunes.getFortune()
 
     })
     
