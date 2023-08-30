@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Text Box Creation</title>
+    <style>
+        /* Style to make text boxes stack vertically */
+        #textBoxContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        /* Add some spacing between text boxes */
+        input[type="text"] {
+            margin-bottom: 5px;
+        }
+
+          /* Style for the centered div */
+        .centered-div {
+            width: 300px;
+            height: 200px;
+            background-color: lightgray;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+         .question-div {
+            width: 350px;
+            height: 200px;
+            background-color: lightgray;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="question-div">
+        <h1>ChatGPT Question here</h1>
+    </div>
+    <div class="centered-div">
+    <div id="textBoxContainer"></div>
+    <button id="createTextBoxBtn">Click to input answer</button>
+    <button id="submitBtn">Submit</button>
+    </div>
+    <script>
+        // Get references to the buttons and container
+        const createTextBoxBtn = document.getElementById("createTextBoxBtn");
+        const textBoxContainer = document.getElementById("textBoxContainer");
+        const submitBtn = document.getElementById("submitBtn");
+
+        let textBoxCount = 0; // Keep track of the number of text boxes
+
+        // Add a click event listener to the "Create Text Box" button
+        createTextBoxBtn.addEventListener("click", () => {
+            // Create a new text box element
+            const textBox = document.createElement("input");
+            textBox.type = "text";
+            textBox.placeholder = "Text Box " + (textBoxCount + 1);
+            textBox.id = "textBox" + textBoxCount; // Set the ID using textBoxCount
+
+            // Append the text box to the container
+            textBoxContainer.appendChild(textBox);
+
+            textBoxCount++; // Increment the text box count
+        });
+
+        // Add a click event listener to the "Submit" button
+        submitBtn.addEventListener("click", () => {
+            const inputs = document.querySelectorAll('input[type="text"]');
+            const values = Array.from(inputs).map(input => input.value);
+
+            // Display the values in the console (you can do something else with them)
+            console.log("Submitted values:", values);
+        });
+    </script>
+</body>
+</html>

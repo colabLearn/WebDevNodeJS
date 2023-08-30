@@ -1,0 +1,18 @@
+{
+  "name": "learnapp",
+  "version": "1.0.0",
+  "description": "Intergate ChatGPT with LearnApp",
+  "main": "learnApp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tunji Adeniran",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "openai": "^4.3.1",
+    "readline-sync": "^1.4.10"
+  }
+}
