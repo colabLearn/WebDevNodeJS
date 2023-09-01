@@ -9,6 +9,7 @@ body {
     padding: 20px;
     border: 1px solid #ccc;
     background-color: #f9f9f9;
+    
 }
 h1 {
     text-align: center;
@@ -32,6 +33,14 @@ h1 {
     background-color: #f44336;
     color: white;
 }
+.prev {
+    background-color: #4caf50;
+    color: white;
+}
+.next {
+    background-color: #f44336;
+    color: white;
+}
 .footer {
     text-align: center;
     margin-top: 50px;
@@ -40,3 +49,14 @@ h1 {
     width: 100px;
     height: auto;
 }
+
+
+.box {
+    width: 600px;
+    height: 400px;
+    background-color: #ccc;
+    text-align: center;
+    font-size: 24px;
+    
+}
+

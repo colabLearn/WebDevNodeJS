@@ -26,6 +26,12 @@ app.get('/', (req, res) => {
     res.render('main', {layout: 'index'})
 } )
 
+app.get('/quest', (req, res) => {
+    //Serves the body of the page aka "main.handlebars" to the container
+    //aka "index.handlebars"
+    res.render('questionSet1', {layout: 'index'})
+} )
+
 //Make the app listen to port 3000
 app.listen(port, () => console.log(`App listening to port ${port}`))
 

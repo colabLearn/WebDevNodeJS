@@ -4,7 +4,59 @@
         <title>Question set 1</title>
     </head>
     <body>
-        <h1>QUestion set 1</h1>
+        <h1>Question set 1</h1>
+    <div class="container">
+        <center>
+        <div class="box" id="box1">Div 1</div>
+        <div class="box" id="box2">Div 2</div>
+        <div class="box" id="box3">Div 3</div>
+       </center>
+
+       <div class="buttons">
+        <button class="button prev" onclick="prevDiv()">Previous</button>
+        <button class="button next" onclick="nextDiv()">Next</button>
+       </div>      
+    </div>
+    
+
+    <script>
+        let currentIndex = 0;
+        const boxes = document.querySelectorAll('.box');
+
+        function showDiv(index) {
+
+            /*
+            The for loop sets the display property of all box 'div' to none
+            */
+            for (let i = 0; i < boxes.length; i++) {
+                boxes[i].style.display = 'none';
+            }
+
+            /*
+            The next statement display only the div at the 
+            specified index from the imput parameter.
+            */
+            boxes[index].style.display = 'block';
+        }
+
+        function prevDiv() {
+            //currentIndex = (currentIndex - 1 + boxes.length) % boxes.length;
+            if(currentIndex!=0)
+                currentIndex = currentIndex - 1 
+           
+            showDiv(currentIndex);
+        }
+
+        function nextDiv() {
+            //currentIndex = (currentIndex + 1) % boxes.length;
+            if(currentIndex<(boxes.length-1))
+                currentIndex = currentIndex + 1
+            showDiv(currentIndex);
+        }
+
+        // Show the initial div
+        showDiv(currentIndex);
+    </script>
 
     </body>
 
