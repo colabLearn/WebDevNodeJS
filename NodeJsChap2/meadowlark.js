@@ -2,7 +2,7 @@
 const express = require('express')
 const app = express()
 const fortunes = require('./lib/fortune')
-
+const handlers = require('./lib/handlers')
 
 const port = process.env.PORT || 3000
 
@@ -26,38 +26,41 @@ app.engine('handlebars', handlebars.engine({
 app.use(express.static('public'))
  
 //app.get('/', (req, res) => res.render('home'))
-app.get('/', (req, res) => {
-    //Serves the body of the page aka "maind.handlebars" to the container
-    //aka "index.hanlebars"
-    res.render('home', {layout: 'meadowlark'})
-})
+// app.get('/', (req, res) => {
+//     //Serves the body of the page aka "maind.handlebars" to the container
+//     //aka "index.hanlebars"
+//     res.render('home', {layout: 'meadowlark'})
+// })
+app.get('/', handlers.home)
 
-app.get('/about', (req, res) => {
-    const randomFortune = 
-    fortunes[Math.floor(Math.random()*fortunes.length)]
-    res.render('about', {
-        layout: 'meadowlark',
-        fortunes: fortunes.getFortune()
+// app.get('/about', (req, res) => {
+//     const randomFortune = 
+//     fortunes[Math.floor(Math.random()*fortunes.length)]
+//     res.render('about', {
+//         layout: 'meadowlark',
+//         fortunes: fortunes.getFortune()
 
-    })
+//     })
     
-})
-
+// })
+app.get('/about', handlers.about)
     
 
 //custom 404 page
-app.use((req, res) => {
-    res.status(404)
-    res.render('404', {layout: 'meadowlark'})
-})
+// app.use((req, res) => {
+//     res.status(404)
+//     res.render('404', {layout: 'meadowlark'})
+// })
+app.use(handlers.notFound)
 
 //custom 500 page
-app.use((err, req, res, next) => {
-    console.error(err.message)
-    res.type('text/plain')
-    res.status(500)
-    res.render('500', {layout: 'meadowlark'})
-})
+// app.use((err, req, res, next) => {
+//     console.error(err.message)
+//     res.type('text/plain')
+//     res.status(500)
+//     res.render('500', {layout: 'meadowlark'})
+// })
+app.use(handlers.serverError)
 
 app.listen(port, () => console.log(
     `Express started on http://localhost:${port};`+
