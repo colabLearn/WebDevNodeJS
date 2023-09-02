@@ -7,7 +7,10 @@ exports.about = (req, res) =>
         layout: 'meadowlark'
     })
 
-exports.notFound = (req, res) => res.render('404', {layout: 'meadowlark'})
+exports.notFound = (req, res) => {
+    res.render('404', {layout: 'meadowlark'})
+}
 
-exports.serverError = (err, req, res, next) => 
-res.render('500', {layout: 'meadowlark'})
+exports.serverError = (err, req, res, next) => {
+    res.render('500', {layout: 'meadowlark'})
+}
