@@ -85,15 +85,22 @@
 
     <script>
         function handleAgree() {
-            alert('Thank you for agreeing to the terms and conditions.');
-            const button = document.getElementsById('Yes');
-           
+          const isConfirmed = confirm('Thank you. Please confirm that you agree and want to continue your participation in this study?');
+
+          if (isConfirmed) {
+              window.location.href = "/quest";
+            }
 
             //Add addition actions here if needed
         }
 
         function handleDisagree() {
-            alert('You have chosen not to agree to the terms and conditions.');
+            const isConfirmed = confirm('Thank you. Please confirm that you do NOT want to continue your  participation in this study?');
+
+          if (isConfirmed) {
+              window.location.href = "/nonParticipant";
+            }
+
             // Add additional actions here if needed
         }
     </script>
